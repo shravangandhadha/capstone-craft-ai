@@ -1,4 +1,5 @@
-# Project Navigator AI
+npm install
+npm run build# Project Navigator AI
 
 AI Project Idea Generator & Mentor
 
@@ -138,17 +139,7 @@ Data Flow Diagram
 
             [Interactive Dashboard]
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://capstone-craft-ai.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ee76dcca-0e8d-4bde-a006-74c8de76431c).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+AI generation uses the Google Gemini API through Google AI Studio. The API key is read server-side and is never exposed to the browser.
 
 ## Development
 
@@ -160,3 +151,18 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+Create `.env.local` for local AI generation:
+
+```sh
+GEMINI_API_KEY=your_google_ai_studio_key
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+For deployment, set the same variables in the hosting provider's server environment, then run:
+
+```sh
+npm run build
+```
+
+Use `npm run build` for a production build and the hosting provider's detected start command for the generated TanStack Start server.

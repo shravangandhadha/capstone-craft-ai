@@ -55,7 +55,6 @@ const strArray = { type: "array", items: str } as const;
 function obj(properties: Record<string, unknown>) {
   return {
     type: "object",
-    additionalProperties: false,
     properties,
     required: Object.keys(properties),
   };
