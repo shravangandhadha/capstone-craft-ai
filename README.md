@@ -152,6 +152,19 @@ npm i
 npm run dev
 ```
 
+Run the dependency-free smoke tests:
+
+```sh
+npm test
+```
+
+Test the deployed URL as well:
+
+```sh
+set LIVE_URL=https://your-worker.workers.dev
+npm run test:live
+```
+
 Create `.env.local` for local AI generation:
 
 ```sh
